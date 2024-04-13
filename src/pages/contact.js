@@ -112,6 +112,7 @@ function makeForm(){
     const SubmitButton = document.createElement('input');
     SubmitButton.setAttribute('type', 'submit');
     SubmitButton.setAttribute('value', 'Submit');
+    SubmitButton.setAttribute('id', 'submit');
     Form.appendChild(SubmitButton); // Append submit button to form
 
     // Add form submit event listener
@@ -140,7 +141,6 @@ function loadContact(){
 
     InfoTitle.textContent = "Contact Us";
     FormTitle.textContent = "Form for Contact us"
-
 
 
     removeAllChildNodes(Content);

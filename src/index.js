@@ -18,6 +18,6 @@ function setBtnEvent(){
 
 
 function init(){
-    loadContact();
+    loadHome();
     setBtnEvent();
 }

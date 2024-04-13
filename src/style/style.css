@@ -1,12 +1,13 @@
 :root{
     --nav-background-color: #DC144F;
     --nav-text-color: white;
+    --main-background-color: #e7e5e4;
+    --item-background-color: #fafaf9;
 }
 
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -15,6 +16,11 @@ body {
 #app{
     display: flex;
     flex-direction: column;
+    height: 100vh;
+}
+
+h2{
+    font-size: 2rem;
 }
 
 /* Header */
@@ -48,25 +54,26 @@ header{
 
 main {
     margin: 0 auto;
+    flex: 1;
     padding-block: 20px;
-    background-color: #fff;
+    background-color: var(--main-background-color);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100vw;
-    min-height: calc(100vh - 12vh - 1rem - 24px);
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     overflow: scroll;
 }
 
 #content{
-    max-width: 960px;
     padding: 1rem;
     max-width: 700px;
     min-width: 250px;
     width: 100vw;
 }
+
 
 
 /* Home */
@@ -98,18 +105,50 @@ main {
     flex-direction: column;
 }
 
-
+#submit{
+    margin-bottom: 1.2rem;
+}
 
 .input{
     height: 3rem;
-    font-size: 2rem;
+    font-size: 1rem;
+    min-width: 450px;
 }
 
 #msg-input{
     height: 100px; /* Set a fixed height */
     resize: vertical; /* Allow horizontal resizing */
     overflow: scroll; 
-    font-size: 0.8rem;
+    font-size: 1rem;
+    min-width: 450px;
+}
+
+
+/* Menu */
+.items{
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    background-color: var(--item-background-color);
+    border: grey 2px solid;
+}
+
+.item-name,
+.item-cost{
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.item-description{
+    font-size: 1rem;
+    color: gray;
+    overflow: hidden;
 }
 
 
